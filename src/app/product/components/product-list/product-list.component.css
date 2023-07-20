@@ -1,0 +1,50 @@
+.table-container {
+  margin: 1rem;
+}
+
+.fab-btn-container {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+}
+
+.icon {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  color: #eef27e;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: #e1d2fc;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+.mat-mdc-form-field-infix {
+  width: 34rem!important;
+}
+
+.mat-mdc-card-avatar {
+  margin: 0;
+}
+
+.image-cell {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  margin-left: 8px;
+}

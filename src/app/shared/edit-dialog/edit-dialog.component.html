@@ -1,0 +1,32 @@
+<h2 mat-dialog-title style="color: #673AB7;">Update Product</h2>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput [formControl]="nameFormControl" [(ngModel)]="data.name">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Name is required
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Company</mat-label>
+    <input type="text" matInput [formControl]="companyFormControl" [(ngModel)]="data.company">
+    <mat-error *ngIf="companyFormControl.hasError('required')">
+      Company is required
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Price</mat-label>
+    <input type="text" matInput [formControl]="priceFormControl" [(ngModel)]="data.price">
+    <mat-error *ngIf="priceFormControl.hasError('required')">
+      Price is required
+    </mat-error>
+  </mat-form-field>
+  <div class="file-input">
+    <input type="file" name="image" ngModel required #image="ngModel" (change)="onUpload($event)">
+  </div>
+  <mat-dialog-actions>
+    <button mat-button class="mat-raised-button mat-primary" mat-dialog-close>Close</button>
+    <button mat-button class="mat-raised-button mat-primary" (click)="editProduct()">Save</button>
+  </mat-dialog-actions>
+</form>

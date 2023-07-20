@@ -1,0 +1,32 @@
+<h2 mat-dialog-title style="color: #673AB7;">Add Product</h2>
+
+<form class="example-form"  #product="ngForm" (ngSubmit)="onSubmit(product)" novalidate>
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput name="name" ngModel required #name="ngModel">
+    <mat-error *ngIf="!name.valid">
+      Name is required
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Company</mat-label>
+    <input type="text" matInput name="company" ngModel required #company="ngModel">
+    <mat-error *ngIf="!company.valid">
+      Company is required
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Price</mat-label>
+    <input type="text" matInput name="price" ngModel required #price="ngModel">
+    <mat-error *ngIf="!price.valid">
+      Price is required
+    </mat-error>
+  </mat-form-field>
+  <div>
+    <input type="file" name="image" ngModel required #image="ngModel" (change)="onUpload($event)">
+  </div>
+  <mat-dialog-actions>
+    <button mat-button class="mat-raised-button mat-primary" mat-dialog-close>Close</button>
+    <button mat-button class="mat-raised-button mat-primary" (click)="addNewProduct()">Add</button>
+  </mat-dialog-actions>
+</form>

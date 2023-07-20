@@ -1,0 +1,20 @@
+.back-btn-container {
+  position: fixed;
+  top: 5rem;
+  right: 3rem;
+}
+
+.card-container {
+  position: relative;
+  top: 1rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+img {
+  object-fit: cover;
+}
