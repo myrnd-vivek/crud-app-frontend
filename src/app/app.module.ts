@@ -12,13 +12,15 @@ import { EditDialogComponent } from './shared/edit-dialog/edit-dialog.component'
 import { AddDialogComponent } from './shared/add-dialog/add-dialog.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfirmDialogComponent,
     EditDialogComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

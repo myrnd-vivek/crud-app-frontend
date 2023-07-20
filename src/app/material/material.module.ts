@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 
 
@@ -31,7 +33,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     MatFormFieldModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule
   ],
 })
 export class MaterialModule {}

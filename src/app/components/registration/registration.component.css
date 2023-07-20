@@ -1,0 +1,49 @@
+.card-container {
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 475px;
+  min-height: 600px;
+}
+
+.card-title {
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+
+.card-sub-title {
+  padding-bottom: 30px;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #ECECEC;
+  width: 440px;
+}
+
+.form-container {
+  margin-top: 40px;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.checkbox-text {
+  color: #989898;
+}
+
+span {
+  color: blue;
+}
+
+.btn-container {
+  margin-top: 36px;
+}
+
+button {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  border-radius: 25px;
+}

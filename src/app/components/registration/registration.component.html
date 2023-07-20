@@ -1,0 +1,49 @@
+<mat-card class="card-container">
+  <mat-card-header class="card-header">
+    <mat-card-title class="card-title">Sign Up</mat-card-title>
+    <mat-card-subtitle class="card-sub-title">Please fill in this form to create an account !</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="registerUser()" novalidate>
+      <!-- First Name -->
+      <div>
+        <mat-form-field style="margin-right: 18px;">
+          <mat-label>Enter your first name</mat-label>
+          <input matInput placeholder="First Name" formControlName="fName">
+          <mat-error *ngIf="fName && fName.hasError('required')">First name is required</mat-error>
+        </mat-form-field>
+        <!-- Last Name -->
+        <mat-form-field>
+          <mat-label>Enter your last name</mat-label>
+          <input matInput placeholder="Last Name" formControlName="lName" >
+          <mat-error *ngIf="lName && lName.hasError('required')">Last name is required</mat-error>
+        </mat-form-field>
+      </div>
+      <!-- Email -->
+      <div>
+        <mat-form-field class="input-field">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email" >
+          <mat-error *ngIf="email && email.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="email && email.hasError('email')">Not a valid email</mat-error>
+        </mat-form-field>
+      </div>
+      <!-- Password -->
+      <div>
+        <mat-form-field class="input-field">
+          <mat-label>Enter your password</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="password">
+          <mat-error *ngIf="password && password.hasError('required')">You must enter a value</mat-error>
+          <mat-error *ngIf="password && password.hasError('minlength')">Password must have minimum eight character</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="checkbox">
+        <mat-checkbox color="primary" formControlName="accept"><span class="checkbox-text">I accept the <span>Terms of Use</span> & <span>Privacy Policy.</span> </span></mat-checkbox>
+      </div>
+      <div class="btn-container">
+        <button mat-button color="primary" [disabled]="loginForm.invalid">Sign Up</button>
+      </div>
+    </form>
+  </mat-card-content>
+
+</mat-card>
